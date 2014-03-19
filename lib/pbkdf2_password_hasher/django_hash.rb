@@ -1,5 +1,4 @@
 require 'openssl'
-require 'digest'
 require 'base64'
 
 class DjangoHash
