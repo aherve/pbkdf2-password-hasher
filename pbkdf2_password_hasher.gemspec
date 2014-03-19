@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["mail@aurelien-herve.com"]
   spec.summary       = %q{pbkdf2 hash check}
   spec.description   = %q{Check a password against a pbkdf2 hashed string. Useful to import password hashes from django application to rails/devise application}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/aherve/pbkdf2-password-hasher"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
