@@ -51,7 +51,8 @@ class DjangoHash
 
   # Pseudo Random Function, as described in wikipedia
   def prf(data)
-    OpenSSL::HMAC.digest(OpenSSL::Digest.new("sha256"),@password, data)
+    @hash_func ||= OpenSSL::Digest.new("sha256")
+    OpenSSL::HMAC.digest(@hash_func,@password, data)
   end
 
   def block
