@@ -12,6 +12,11 @@ In your Gemfile :
 gem pbkdf2_password_hasher, git: 'aherve/pbkdf2-password-hasher'
 ```
 
+or install it with:
+```ruby
+gem install pbkdf2_password_hasher
+```
+
 ## Usage
 
 - Hash a password with salt:
