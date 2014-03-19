@@ -25,7 +25,7 @@ salt = 'NaCl'    # random salt key
 pass = 's3cr3t'  # your password
 it   = 1000      # number of iterations
 
-hah = Pbkdf2PasswordHasher.has_password(pass,salt,it)
+hash = Pbkdf2PasswordHasher.hash_password(pass,salt,it)
 ```
 - Check password validity against string
 
