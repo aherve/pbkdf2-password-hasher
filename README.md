@@ -7,7 +7,7 @@ This was originally built to import password hashes from django application to r
 
 ## Installation
 
-In your Gemfile : 
+In your Gemfile :
 ```ruby
 gem pbkdf2_password_hasher, git: 'aherve/pbkdf2-password-hasher'
 ```
@@ -25,13 +25,13 @@ salt = 'NaCl'    # random salt key
 pass = 's3cr3t'  # your password
 it   = 1000      # number of iterations
 
-hash = Pbkdf2PasswordHasher.hash_password(pass,salt,it)
+hash = Pbkdf2PasswordHasher.hash_password(pass,salt,it) #=> "pbkdf2_sha256$1000$NaCl$uDAu+fkRHoZk03PKp0bzrXDWc4j4mhkzGBm7ljbvp58="
 ```
 - Check password validity against string
 
 ```ruby
 # hashed string from django app
-hsh ='pbkdf2_sha256$12000$PEnXGf9dviXF$2soDhu1WB8NSbFDm0w6NEe6OvslVXtiyf4VMiiy9rH0=' 
+hsh ='pbkdf2_sha256$12000$PEnXGf9dviXF$2soDhu1WB8NSbFDm0w6NEe6OvslVXtiyf4VMiiy9rH0='
 
 # with right password:
 Pbkdf2PasswordHasher.check_password('bite',hsh) #=> true
